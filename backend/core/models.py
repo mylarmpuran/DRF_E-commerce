@@ -131,7 +131,7 @@ class FAQ(models.Model):
 class Analytics(models.Model):
     sales = models.DecimalField(max_digits=10, decimal_places=2)
     traffic = models.PositiveIntegerField()
-    popular_products = models.ManyToManyField(Product,on_delete = models.CASCADE,related_name='analytics')
+    popular_products = models.ManyToManyField(Product, related_name='analytics')
     created_at = models.DateTimeField(auto_now_add=True)
     
 
